@@ -36,6 +36,16 @@ export default function Home({ pageProps }) {
           name="viewport"
           content="width=device-width, initial-scale=1.0"
         ></meta>
+        <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin
+        ></link>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap"
+          rel="stylesheet"
+        ></link>
       </Head>
       <main className={styles.main}>
         <div className="robot">
