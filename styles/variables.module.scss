@@ -1,0 +1,16 @@
+
+
+    /* color variables */
+   $primary-color-pink: #FEB4BE;
+   $primary-color-purple: #D8A7CD;
+   $primary-color-orange: #FFA685;
+   $primary-color-green: #9BDACA;
+   $primary-color-yellow: #FFD59E;
+
+   :export{
+    pink: $primary-color-pink;
+    purple: $primary-color-purple;
+    orange: $primary-color-orange;
+    green: $primary-color-green;
+    yellow: $primary-color-yellow;
+   }

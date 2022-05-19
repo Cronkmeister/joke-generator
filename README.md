@@ -1,34 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# OpenAI API Quickstart - Node.js example app
 
-## Getting Started
+This is an example pet name generator app used in the OpenAI API [quickstart tutorial](https://beta.openai.com/docs/quickstart). It uses the [Next.js](https://nextjs.org/) framework with [React](https://reactjs.org/). Check out the tutorial or follow the instructions below to get set up.
 
-First, run the development server:
+## Setup
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+1. If you don’t have Node.js installed, [install it from here](https://nodejs.org/en/) ** if error occurs during build try using node version 14 **
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Clone this repository
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+3. Navigate into the project directory
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+   ```bash
+   $ cd openai-quickstart-node
+   ```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+4. Install the requirements
 
-## Learn More
+   ```bash
+   $ npm install
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+5. Make a copy of the example environment variables file
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   $ cp .env.example .env
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+6. Add your [API key](https://beta.openai.com/account/api-keys) to the newly created `.env` file
 
-## Deploy on Vercel
+7. Run the app
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   $ npm run dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+You should now be able to access the app at [http://localhost:3000](http://localhost:3000)! For the full context behind this example app, check out the [tutorial](https://beta.openai.com/docs/quickstart).

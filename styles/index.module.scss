@@ -1,0 +1,115 @@
+@import "./variables.module";
+
+@font-face {
+  font-family: "ColfaxAI";
+  src: url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff2)
+      format("woff2"),
+    url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ColfaxAI";
+  src: url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff2) format("woff2"),
+    url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff) format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+.container {
+  background-color: $primary-color-yellow;
+  height: 103vh;
+  margin: -1rem -1rem -1rem -1rem;
+}
+
+.main,
+.main input {
+  font-size: 16px;
+  line-height: 24px;
+  color: #353740;
+  font-family: "ColfaxAI", Helvetica, sans-serif;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+}
+.main .icon {
+  width: 34px;
+}
+.main h3 {
+  font-size: 48px;
+  line-height: 40px;
+  letter-spacing: 3px;
+  text-align: center;
+  background-color: #202123;
+  padding: 16px;
+  padding-bottom: 4px;
+  margin: 16px 0 30px;
+  border-radius: 30px;
+  font-family: 'Luckiest Guy', cursive;
+}
+.main form {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+}
+.main input[type="text"] {
+  padding: 12px 16px;
+  border: 1px solid $primary-color-purple;
+  border-radius: 16px;
+  margin-bottom: 24px;
+}
+.main ::placeholder {
+  color: #8e8ea0;
+  opacity: 1;
+}
+.main input[type="submit"] {
+  padding: 12px 0;
+  color: #fff;
+  background-color: $primary-color-purple;
+  box-shadow: 0px 4px 10px  #e3c2ec;
+  border: none;
+  border-radius: 16px;
+  text-align: center;
+  transition: ease-in 0.1s;
+  cursor: pointer;
+}
+.main input[type="submit"]:hover {
+  background-color: #8f6ad5;
+}
+.main label {
+  color: rgb(139, 132, 132);
+  font-size: 12px;
+  font-style: italic;
+  padding-left: 16px;
+}
+.main p {
+  margin: 0;
+  padding: 4px;
+  font-size: 14px;
+  line-height: 16px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+.main span {
+  color: rgb(139, 132, 132);
+  
+}
+.main .box {
+  background-color: #fff;
+  width: 302px;
+  margin-top: 24px;
+  padding: 8px;
+  border-radius: 16px;
+  border: 1px solid $primary-color-purple;
+}
+.main .result {
+  margin-top: 8px;
+  max-width: 302px;
+  background-color: #fff;
+  border-radius: 16px;
+}
