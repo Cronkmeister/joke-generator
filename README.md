@@ -1,10 +1,10 @@
-# OpenAI API Quickstart - Node.js example app
+# OpenAI API Dad Joke Generaotr
 
 This is an example pet name generator app used in the OpenAI API [quickstart tutorial](https://beta.openai.com/docs/quickstart). It uses the [Next.js](https://nextjs.org/) framework with [React](https://reactjs.org/). Check out the tutorial or follow the instructions below to get set up.
 
 ## Setup
 
-1. If you don’t have Node.js installed, [install it from here](https://nodejs.org/en/) ** if error occurs during build try using node version 14 **
+1. If you don’t have Node.js installed, [install it from here](https://nodejs.org/en/) 
 
 2. Clone this repository
 
