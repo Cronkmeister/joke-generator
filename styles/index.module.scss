@@ -67,6 +67,7 @@
   opacity: 1;
 }
 .main input[type="submit"] {
+  width: 100%;
   padding: 12px 0;
   color: #fff;
   background-color: $primary-color-purple;
@@ -112,4 +113,13 @@
   max-width: 302px;
   background-color: #fff;
   border-radius: 16px;
+}
+.buttonContainer {
+  width: 320px;
+  position: relative;
+}
+
+.hidden {
+  visibility: hidden;
+  position: absolute;
 }

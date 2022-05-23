@@ -1,16 +1,19 @@
 import Head from "next/head";
 import { useState } from "react";
 import PageTitle from "../components/PageTitle";
+import Spinner from "../components/Spinner";
 import styles from "../styles/index.module.scss";
 
 export default function Home({ pageProps }) {
   const [topicInput, setTopicInput] = useState("");
   const [result, setResult] = useState();
   const [prompt, setPrompt] = useState();
+  const [isLoading, setIsLoading] = useState();
 
   //handle form submit - send request to OpenAI
   async function onSubmit(event) {
     event.preventDefault();
+    setIsLoading(true);
     const response = await fetch("/api/generate", {
       method: "POST",
       headers: {
@@ -24,28 +27,13 @@ export default function Home({ pageProps }) {
     setPrompt(topicInput);
     setResult(data.result);
     setTopicInput("");
+    setIsLoading(false);
   }
 
   return (
     <div className={styles.container}>
       <Head>
         <title>Dad Joke Generator</title>
-        <meta charset="UTF-8"></meta>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0"
-        ></meta>
-        <link rel="preconnect" href="https://fonts.googleapis.com"></link>
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin
-        ></link>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap"
-          rel="stylesheet"
-        ></link>
       </Head>
       <main className={styles.main}>
         <div className="robot">
@@ -61,8 +49,23 @@ export default function Home({ pageProps }) {
             value={topicInput}
             onChange={(e) => setTopicInput(e.target.value)}
           />
-          <input type="submit" value="Generate jokes" />
+          {isLoading ? (
+            <div className={styles.buttonContainer}>
+              <input type="submit" value="" />
+              <Spinner />
+            </div>
+          ) : (
+            <div className={styles.buttonContainer}>
+              <input type="submit" value="Generate jokes" />
+            </div>
+          )}
+
+          {/* <div className={styles.buttonContainer}>
+            <input type="submit" value="Generate jokes" />
+            <Spinner />
+          </div> */}
         </form>
+        {/* {isLoading ? <Spinner /> : <p className={styles.hidden}>not loading</p>} */}
         <div className={styles.box}>
           <p>
             <span>Your prompt: </span>
